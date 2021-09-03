@@ -1,9 +1,12 @@
 # Command
+01. Ketik
 sudo su
+cd
 
 1. Update Dulu 
 
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+update-grub
 
 2. Install Semua VPN Batch 
 
