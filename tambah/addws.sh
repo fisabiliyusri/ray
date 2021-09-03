@@ -32,7 +32,7 @@ cat>/etc/v2ray/$user-tls.json<<EOF
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
-      "port": "4443",
+      "port": "443",
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
@@ -47,7 +47,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
-      "port": "780",
+      "port": "8880",
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
@@ -67,8 +67,8 @@ echo -e "==========-V2RAY/VMESS-=========="
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "Server IP      : $PUBLIC_IP"
-echo -e "port TLS       : 4443"
-echo -e "port none TLS  : 80"
+echo -e "port TLS       : 444"
+echo -e "port none TLS  : 8880"
 echo -e "id             : ${uuid}"
 echo -e "alterId        : 2"
 echo -e "Security       : auto"
