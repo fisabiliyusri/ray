@@ -8,7 +8,9 @@ OS=`uname -m`;
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 
-
+mkdir /etc/v2ray
+mkdir /var/lib/crot-script;
+clear
 #wget https://github.com/${GitUser}/
 GitUser="fisabiliyusri"
 #wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
