@@ -5,7 +5,8 @@ sudo su && cd
 1. Update Dulu 
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 
-1. Update Dulu
+1. Update Dulu 
+
 apt-get update && apt-get upgrade && update-grub
 
 1. reboot
