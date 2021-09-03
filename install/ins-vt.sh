@@ -14,8 +14,10 @@ chronyc tracking -v
 date
 # install v2ray
 GitUser="fisabiliyusri"
+Lfolder="ray"
 #wget https://github.com/${GitUser}/
-wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/go.sh && chmod +x go.sh && ./go.sh
+#wget https://github.com/${GitUser}/${Lfolder}/
+wget https://raw.githubusercontent.com/${GitUser}/${Lfolder}/main/install/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
@@ -485,13 +487,13 @@ END
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 4443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 5443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 6443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 880 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8880 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 4443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 5443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 6443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 880 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8880 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8443 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
@@ -508,7 +510,7 @@ systemctl start v2ray@trojan.service
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O addws "https://raw.githubusercontent.com/${GitUser}/test1/main/tambah/addws.sh"
+wget -O addws "https://raw.githubusercontent.com/${GitUser}/${Lfolder}/main/tambah/addws.sh"
 wget -O addvless "https://raw.githubusercontent.com/${GitUser}/test1/main/tambah/addvless.sh"
 wget -O addtr "https://raw.githubusercontent.com/${GitUser}/test1/main/tambah/addtr.sh"
 wget -O delws "https://raw.githubusercontent.com/${GitUser}/test1/main/hapus/delws.sh"
