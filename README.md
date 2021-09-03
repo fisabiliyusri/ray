@@ -1,5 +1,5 @@
 # Command
-01. Ketik
+0. Ketik
 sudo su && cd
 
 1. Update Dulu 
