@@ -24,13 +24,13 @@ echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 #wget https://github.com/${GitUser}/
 GitUser="fisabiliyusri"
-wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/${GitUser}/test1/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
+wget https://raw.githubusercontent.com/${GitUser}/ray/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/${GitUser}/ray/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
 wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/shadowsocksobfs.sh && chmod +x shadowsocksobfs.sh && screen -S ss ./shadowsocksobfs.sh
-wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/${GitUser}/ray/main/install/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
 wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/websocket.sh
@@ -54,7 +54,7 @@ echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                  : 22, 500"  | tee -a log-install.txt
 echo "   - SSH-WS CDN OpenSSH       : 2095"  | tee -a log-install.txt
-echo "   - SSH-WS CDN Dropbear      : 8880"  | tee -a log-install.txt
+echo "   - SSH-WS CDN Dropbear      : 2086"  | tee -a log-install.txt
 echo "   - SSH-WS CDN SSL/TLS       : 443"  | tee -a log-install.txt
 echo "   - OpenVPN-WS               : 2082"  | tee -a log-install.txt
 echo "   - OpenVPN                  : TCP 1194, UDP 2200, SSL 992, X1197"  | tee -a log-install.txt
@@ -70,8 +70,8 @@ echo "   - SSTP VPN                 : 5555"  | tee -a log-install.txt
 echo "   - Shadowsocks-R            : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS              : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP             : 3443-3453"  | tee -a log-install.txt
-echo "   - V2RAY Vmess TLS          : 4443"  | tee -a log-install.txt
-echo "   - V2RAY Vmess None TLS     : 780"  | tee -a log-install.txt
+echo "   - V2RAY Vmess TLS          : 8443"  | tee -a log-install.txt
+echo "   - V2RAY Vmess None TLS     : 8880"  | tee -a log-install.txt
 echo "   - Trojan                   : 6443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
